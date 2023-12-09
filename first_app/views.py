@@ -1,7 +1,12 @@
 from django.shortcuts import render
 
+from . import models
 # Create your views here.
 
 
 def home(request):
-    return render(request,'home.html')
+
+    student=models.Student.objects.all()
+
+
+    return render(request,'home.html',{'data':student})
