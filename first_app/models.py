@@ -11,4 +11,19 @@ class Student(models.Model):
     def __str__(self):
         return f"Roll : {self.roll} - {self.name}"
     
+class StudentModel(models.Model):
+    roll=models.IntegerField(primary_key=True)
+    name=models.CharField( max_length=50)
+    father_name=models.CharField( max_length=50)
+    address=models.TextField()
+    
+    
+    
+
+    
+
+    
+
+    
+
 
